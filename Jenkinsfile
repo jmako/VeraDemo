@@ -33,6 +33,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
             }
+         }
     
     }
 }
