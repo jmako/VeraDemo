@@ -25,7 +25,7 @@ pipeline {
 		stage('---Veracode Scan---') {
             steps {
 			    withCredentials([usernamePassword(credentialsId: '30925d33-3b62-4d2c-85ae-45de4e9df498', passwordVariable: 'vkey', usernameVariable: 'vid')]) {
-                    veracode applicationName: 'VeraDemo', criticality: 'Medium', debug: true, fileNamePattern: '', replacementPattern: '', sandboxName: '', scanExcludesPattern: '', scanIncludesPattern: '', scanName: '$buildnumber', teams: '',timeout: 30, uploadExcludesPattern: '', uploadIncludesPattern: '**/**.war', vuser: 'vid', vpassword: 'vkey'
+                    veracode applicationName: 'VeraDemo', criticality: 'Medium', debug: true, fileNamePattern: '', replacementPattern: '', sandboxName: '', scanExcludesPattern: '', scanIncludesPattern: '', scanName: '$buildnumber', teams: '',timeout: 30, uploadExcludesPattern: '', uploadIncludesPattern: '**/**.war', vid: 'vid', vkey: 'vkey'
                 		}
 			}
 		}
